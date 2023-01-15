@@ -2,7 +2,7 @@ import datetime, random, threading
 import asyncio, enum, inspect
 import os
 from ..logging import *
-import api
+from .api import *
 
 class Handler():
     def __init__(self) -> None:
