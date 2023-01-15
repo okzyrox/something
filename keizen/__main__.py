@@ -2,12 +2,15 @@ from . import *
 
 def main():
     print("Running...")
+
+def test():
+    print("Testing...")
+    logger.logging.debug("Test")
     handler.loop(
         "nn::hid::IHidServer::GetGyroscopeZeroDriftMode", 
         "nn::hid::IHidServer::SetGyroscopeZeroDriftMode",
         "nn::hid::IHidDebugServer::GetTouchScreenConfiguration"
         )
-
-def test():
-    print("Testing...")
-    logger.logging.debug("Test")
+    ihid = IHidServer
+    print(ihid.onReceiveServiceIdReturnFunc(1))
+    print(ihid.onReceiveServiceHexReturnFunc('0x0'))
